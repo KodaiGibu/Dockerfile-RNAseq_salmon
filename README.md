@@ -29,6 +29,7 @@ rnaseq_salmon               latest          66cb8ab17d4d   43 minutes ago   1GB
 ## 解析の準備
 
 マウントするディレクトリに解析するfastqファイルおよびadapters.faを置く。
+fastqは_1.fq.gz、_1.fq.gzという末尾のものが利用できる。他の末尾のfastqを利用する際は、code01.shの16行目と18行目を書き換える。
 
 imageからdocker コンテナを立ち上げる。
 以下ではsalmonという名前を付けたdocker コンテナを立ち上げている
@@ -82,7 +83,7 @@ ls Apla/
 問題なくindexの作成が終了すると、Aplaというディレクトリが作成され、中にcomplete_ref_lens.binなどのファイルが生成されている。
 
 ### indexのパスcode01.shに書き込む
-pwd等のコマンドでindexのディレクトリを確認し、code01.shの`db="/home/gibukodai/216/Ap/db/Apla"`のpathを書き換える。adapters.faを編集し、シーケンスに利用したアダプター配列の情報を記載する。
+pwd等のコマンドでindexのディレクトリを確認し、code01.shの`db="/mnt/Adig/Adig"`のpathを書き換える。adapters.faを編集し、シーケンスに利用したアダプター配列の情報を記載する。
 pwdでは、indexの置かれたディレクトリまでは出ないので注意。
 ```ディレクトリ内のファイルの確認
 #pathの確認。
