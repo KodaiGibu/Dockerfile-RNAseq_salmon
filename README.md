@@ -75,8 +75,6 @@ rm GCF_001949145.1_OKI-Apl_1.0_rna.fna.tbz2
 
 #salmonでリファレンスとして利用するため、indexを作成
 salmon index -t ./GCF_001949145.1_OKI-Apl_1.0_rna.fna -i ./Apla -k 31
-#遺伝研スパコンの場合は以下
-singularity exec /usr/local/biotools/s/salmon\:1.9.0--h7e5ed60_1 salmon index -t ./GCF_001949145.1_OKI-Apl_1.0_rna.fna -i ./Apla -k 31
 
 #作成されたindexディレクトリを確認
 ls Apla/
